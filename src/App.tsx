@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './context/ThemeContext';
-import About from './pages/About';
-import Book from './pages/Book';
-import Contact from './pages/Contact';
-import Home from './pages/Home';
-import Services from './pages/Services';
+
+// Lazy load route components
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Book = lazy(() => import('./pages/Book'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 const NotFound: React.FC = () => (
   <div className="section-padding text-center">
@@ -24,16 +26,24 @@ function App() {
     <ThemeProvider>
       <ScrollToTop />
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/book" element={<Book />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense
+          fallback={
+            <div className="min-h-screen flex items-center justify-center">
+              <div className="animate-pulse text-xl">Loading...</div>
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/book" element={<Book />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+        <ThemeToggle />
       </Layout>
-      <ThemeToggle />
     </ThemeProvider>
   );
 }

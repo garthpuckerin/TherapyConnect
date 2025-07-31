@@ -38,16 +38,22 @@ const Home: React.FC = () => {
   return (
     <>
       <SkipToContent />
-      <div id="main-content">
+      <main id="main-content" tabIndex={-1}>
         {/* Hero Section */}
-        <section className="section-padding" style={{ background: 'var(--gradient-bg)' }}>
+        <section
+          className="section-padding"
+          style={{ background: 'var(--gradient-bg)' }}
+          aria-labelledby="hero-heading"
+        >
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                  Your Journey to
-                  <span className="text-primary-600"> Healing</span>
-                  <br />
+                <h1
+                  id="hero-heading"
+                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6"
+                >
+                  <span className="block">Your Journey to</span>
+                  <span className="text-primary-600">Healing</span>
                   Starts Here
                 </h1>
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
@@ -55,16 +61,18 @@ const Home: React.FC = () => {
                   the first step towards a healthier, happier you with compassionate, evidence-based
                   care.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/book"
-                    className="btn-primary text-center bg-gradient-to-r from-primary-400 via-primary-500 to-primary-600 hover:from-primary-500 hover:to-primary-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-200"
+                    className="w-full sm:w-auto px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
+                    aria-label="Book a therapy session"
                   >
                     Book a Session
                   </Link>
                   <Link
-                    to="/about"
-                    className="btn-outline text-center border-2 border-primary-500 text-primary-600 hover:bg-primary-50 hover:text-primary-700 font-bold py-3 px-8 rounded-lg transition-all duration-200"
+                    to="/services"
+                    className="w-full sm:w-auto px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary-700 bg-primary-100 hover:bg-primary-200 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
+                    aria-label="Learn more about our services"
                   >
                     Learn More
                   </Link>
@@ -244,14 +252,15 @@ const Home: React.FC = () => {
               </Link>
               <Link
                 to="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-medium py-3 px-8 rounded-lg transition-all duration-200"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-medium py-3 px-8 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+                aria-label="Contact us for more information"
               >
                 Get in Touch
               </Link>
             </div>
           </div>
         </section>
-      </div>
+      </main>
     </>
   );
 };
