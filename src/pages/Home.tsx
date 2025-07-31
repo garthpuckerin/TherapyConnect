@@ -238,7 +238,7 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/book"
-                className="bg-white text-primary-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors duration-200"
+                className="bg-white text-primary-600 hover:bg-gray-100 border-2 border-primary-600 font-medium py-3 px-8 rounded-lg transition-colors duration-200"
               >
                 Book Your Session
               </Link>

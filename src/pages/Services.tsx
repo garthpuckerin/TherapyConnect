@@ -18,9 +18,8 @@ const Services: React.FC = () => {
         <section className="section-padding" style={{ background: 'var(--gradient-bg)' }}>
           <div className="container-custom">
             <h1 className="text-4xl md:text-5xl font-bold text-text mb-6">Our Services</h1>
-            <p className="text-xl text-text mb-8 leading-relaxed max-w-2xl mx-auto">
-              Compassionate, evidence-based therapy for individuals and couples. In-person and
-              virtual sessions available.
+            <p className="text-xl text-text mb-8 leading-relaxed max-w-2xl">
+              Compassionate, evidence-based therapy for individuals and couples. <br />In-person and virtual sessions available.
             </p>
           </div>
         </section>

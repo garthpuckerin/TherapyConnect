@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import ScrollToTop from './components/ScrollToTop';
 import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from './context/ThemeContext';
 import About from './pages/About';
@@ -12,13 +13,14 @@ import Services from './pages/Services';
 const NotFound: React.FC = () => (
   <div className="section-padding text-center">
     <h1 className="text-4xl font-bold mb-4">404 – Page Not Found</h1>
-    <p className="text-lg text-gray-600">Sorry, we couldn't find the page you were looking for.</p>
+    <p className="text-lg text-gray-600">Sorry, we couldn&apos;t find the page you were looking for.</p>
   </div>
 );
 
 function App() {
   return (
     <ThemeProvider>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
