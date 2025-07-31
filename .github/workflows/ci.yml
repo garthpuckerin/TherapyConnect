@@ -36,6 +36,7 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npx playwright install --with-deps
+      - run: npx playwright install-deps
       - run: npm run test:ui
 
   deploy-preview:
@@ -47,7 +48,12 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
-      - run: npm run build
+      - name: Build application
+        run: npm run build
+        env:
+          NODE_ENV: production
+          REACT_APP_API_URL: ${{ secrets.REACT_APP_API_URL || 'https://api.example.com' }}
+          # Add other required environment variables here
       # Example Netlify deploy preview (replace with Vercel if needed)
       - uses: nwtgck/actions-netlify@v3
         with:

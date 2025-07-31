@@ -81,8 +81,8 @@ const Home: React.FC = () => {
                       Licensed Professional Counselor
                     </p>
                     <p className="text-gray-600">
-                      Over 10 years of experience helping individuals and couples navigate life's
-                      challenges with compassion and expertise.
+                      Over 10 years of experience helping individuals and couples navigate
+                      life&apos;s challenges with compassion and expertise.
                     </p>
                   </div>
                 </div>
@@ -217,8 +217,8 @@ const Home: React.FC = () => {
                       </svg>
                     ))}
                   </div>
-                  <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
-                  <p className="font-semibold text-gray-900">— {testimonial.name}</p>
+                  <p className="text-gray-700 mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
+                  <p className="font-semibold text-gray-900">â€” {testimonial.name}</p>
                 </div>
               ))}
             </div>

@@ -13,7 +13,9 @@ import Services from './pages/Services';
 const NotFound: React.FC = () => (
   <div className="section-padding text-center">
     <h1 className="text-4xl font-bold mb-4">404 – Page Not Found</h1>
-    <p className="text-lg text-gray-600">Sorry, we couldn&apos;t find the page you were looking for.</p>
+    <p className="text-lg text-gray-600">
+      Sorry, we couldn&apos;t find the page you were looking for.
+    </p>
   </div>
 );
 

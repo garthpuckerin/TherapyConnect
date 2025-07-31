@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
-
-const calendlyUrl = 'https://calendly.com/your-therapist/therapy-session'; // Replace with actual Calendly link
+import { useState } from 'react';
 
 // Skip to content link for accessibility
 const SkipToContent = () => (

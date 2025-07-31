@@ -19,7 +19,9 @@ const Services: React.FC = () => {
           <div className="container-custom">
             <h1 className="text-4xl md:text-5xl font-bold text-text mb-6">Our Services</h1>
             <p className="text-xl text-text mb-8 leading-relaxed max-w-2xl">
-              Compassionate, evidence-based therapy for individuals and couples. <br />In-person and virtual sessions available.
+              {'Compassionate, evidence-based therapy for individuals and couples.'}
+              <br />
+              {'In-person and virtual sessions available.'}
             </p>
           </div>
         </section>
@@ -27,7 +29,6 @@ const Services: React.FC = () => {
         <section className="section-padding bg-surface">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Individual Therapy */}
               <div className="card text-center">
                 <h2 className="text-2xl font-semibold text-secondary mb-4">Individual Therapy</h2>
                 <p className="text-text mb-4">
@@ -46,7 +47,6 @@ const Services: React.FC = () => {
                 </p>
               </div>
 
-              {/* Couples Therapy */}
               <div className="card text-center">
                 <h2 className="text-2xl font-semibold text-secondary mb-4">Couples Therapy</h2>
                 <p className="text-text mb-4">
@@ -67,7 +67,6 @@ const Services: React.FC = () => {
         <section className="section-padding bg-surface-secondary">
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Session Info */}
               <div className="card text-center">
                 <h3 className="text-xl font-semibold text-text mb-2">Session Information</h3>
                 <ul className="list-disc pl-6 text-text mb-4 text-left inline-block">
@@ -78,7 +77,6 @@ const Services: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Rates & Insurance */}
               <div className="card text-center">
                 <h3 className="text-xl font-semibold text-text mb-2">Rates & Insurance</h3>
                 <p className="text-text mb-4">
