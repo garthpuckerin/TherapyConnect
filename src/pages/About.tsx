@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 // Skip to content link for accessibility
 const SkipToContent = () => (
@@ -32,6 +33,11 @@ const About: React.FC = () => {
 
   return (
     <>
+      <SEO
+        title="About Dr. Sarah Johnson"
+        description="Meet Dr. Sarah Johnson, Licensed Professional Counselor with over 10 years of experience in individual and couples therapy. Compassionate, evidence-based care."
+        keywords="Dr. Sarah Johnson, therapist, counselor, LPC, licensed professional counselor, therapy experience, credentials"
+      />
       <SkipToContent />
       <div id="main-content">
         {/* Hero Section */}
@@ -43,8 +49,8 @@ const About: React.FC = () => {
                   Meet Dr. Sarah Johnson
                 </h1>
                 <p className="text-xl text-text mb-8 leading-relaxed">
-                  A compassionate and experienced therapist dedicated to helping you navigate life's
-                  challenges and discover your path to healing and growth.
+                  A compassionate and experienced therapist dedicated to helping you navigate
+                  life&apos;s challenges and discover your path to healing and growth.
                 </p>
                 <Link
                   to="/book"
@@ -81,10 +87,10 @@ const About: React.FC = () => {
               <div className="prose prose-lg max-w-none">
                 <p className="text-text mb-6 leading-relaxed">
                   Welcome! I&apos;m Dr. Sarah Johnson, a Licensed Professional Counselor with over a
-                  decade of experience helping individuals and couples overcome life's challenges.
-                  My journey into therapy began with my own personal experiences of growth and
-                  healing, which sparked a deep passion for supporting others on their mental health
-                  journeys.
+                  decade of experience helping individuals and couples overcome life&apos;s
+                  challenges. My journey into therapy began with my own personal experiences of
+                  growth and healing, which sparked a deep passion for supporting others on their
+                  mental health journeys.
                 </p>
 
                 <p className="text-text mb-6 leading-relaxed">

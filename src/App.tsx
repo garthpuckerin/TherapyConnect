@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ErrorBoundary from './components/ErrorBoundary';
 import Layout from './components/Layout';
 import ScrollToTop from './components/ScrollToTop';
 import ThemeToggle from './components/ThemeToggle';
@@ -23,28 +24,30 @@ const NotFound: React.FC = () => (
 
 function App() {
   return (
-    <ThemeProvider>
-      <ScrollToTop />
-      <Layout>
-        <Suspense
-          fallback={
-            <div className="min-h-screen flex items-center justify-center">
-              <div className="animate-pulse text-xl">Loading...</div>
-            </div>
-          }
-        >
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/book" element={<Book />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Suspense>
-        <ThemeToggle />
-      </Layout>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <ScrollToTop />
+        <Layout>
+          <Suspense
+            fallback={
+              <div className="min-h-screen flex items-center justify-center">
+                <div className="animate-pulse text-xl">Loading...</div>
+              </div>
+            }
+          >
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/book" element={<Book />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+          <ThemeToggle />
+        </Layout>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

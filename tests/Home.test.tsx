@@ -10,6 +10,6 @@ describe('Home Page', () => {
       </BrowserRouter>,
     );
     expect(screen.getByRole('heading', { name: /your journey to healing/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /book a session/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /book a therapy session/i })).toBeInTheDocument();
   });
 });

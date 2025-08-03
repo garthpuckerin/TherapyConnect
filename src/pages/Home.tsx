@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 // Skip to content link for accessibility
 const SkipToContent = () => (
@@ -37,6 +38,11 @@ const Home: React.FC = () => {
 
   return (
     <>
+      <SEO
+        title="Your Journey to Healing Starts Here"
+        description="Professional therapy services designed to support your mental health journey. Licensed therapist providing individual and couples therapy with online booking."
+        keywords="therapy, counseling, mental health, individual therapy, couples therapy, online booking, therapist, healing, wellness"
+      />
       <SkipToContent />
       <main id="main-content" tabIndex={-1}>
         {/* Hero Section */}
@@ -54,7 +60,7 @@ const Home: React.FC = () => {
                 >
                   <span className="block">Your Journey to</span>
                   <span className="text-primary-600">Healing</span>
-                  Starts Here
+                  <span> Starts Here</span>
                 </h1>
                 <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                   Professional therapy services designed to support your mental health journey. Take
@@ -64,7 +70,7 @@ const Home: React.FC = () => {
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/book"
-                    className="w-full sm:w-auto px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 md:py-4 md:text-lg md:px-10 transition-colors duration-200"
+                    className="w-full sm:w-auto px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 md:py-4 md:text-lg md:px-10 transition-all duration-200 shadow-md hover:shadow-lg"
                     aria-label="Book a therapy session"
                   >
                     Book a Session
@@ -226,7 +232,7 @@ const Home: React.FC = () => {
                     ))}
                   </div>
                   <p className="text-gray-700 mb-4 italic">&ldquo;{testimonial.text}&rdquo;</p>
-                  <p className="font-semibold text-gray-900">â€” {testimonial.name}</p>
+                  <p className="font-semibold text-gray-900">&mdash; {testimonial.name}</p>
                 </div>
               ))}
             </div>

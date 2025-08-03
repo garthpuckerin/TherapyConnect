@@ -10,6 +10,6 @@ describe('About Page', () => {
       </BrowserRouter>,
     );
     expect(screen.getByRole('heading', { name: /meet dr. sarah johnson/i })).toBeInTheDocument();
-    expect(screen.getByText(/licensed professional counselor/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/licensed professional counselor/i)).toHaveLength(2);
   });
 });

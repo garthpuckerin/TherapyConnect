@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 
 // Skip to content link for accessibility
 const SkipToContent = () => (
@@ -13,6 +14,11 @@ const SkipToContent = () => (
 const Services: React.FC = () => {
   return (
     <>
+      <SEO
+        title="Our Services"
+        description="Comprehensive mental health services including individual therapy, couples therapy, and online sessions. Evidence-based approaches for anxiety, depression, and more."
+        keywords="therapy services, individual therapy, couples therapy, online therapy, mental health services, anxiety treatment, depression therapy"
+      />
       <SkipToContent />
       <div id="main-content">
         <section className="section-padding" style={{ background: 'var(--gradient-bg)' }}>

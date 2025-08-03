@@ -12,6 +12,8 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
+    "analyze": "vite build --mode analyze",
+    "type-check": "tsc --noEmit",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -32,6 +34,7 @@
     "@typescript-eslint/eslint-plugin": "^7.0.2",
     "@typescript-eslint/parser": "^7.0.2",
     "@vitejs/plugin-react": "^4.2.1",
+    "@vitest/coverage-v8": "^1.6.1",
     "autoprefixer": "^10.4.17",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
@@ -41,6 +44,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
+    "jsdom": "^26.1.0",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.33",
     "prettier": "^3.2.5",

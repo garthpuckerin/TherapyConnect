@@ -9,6 +9,6 @@ describe('Book Page', () => {
         <Book />
       </BrowserRouter>,
     );
-    expect(screen.getByTitle(/book a therapy session/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /book a session/i })).toBeInTheDocument();
   });
 });
